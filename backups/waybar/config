@@ -15,7 +15,8 @@
 
     "temperature": { 
         "format": " {temperatureC}°C",
-        "tooltip": false,
+     
+   "tooltip": false,
         "interval": 10,
         "hwmon-path": "/sys/class/hwmon/hwmon4/temp1_input",
         "critical-threshold": 80,
@@ -27,7 +28,8 @@
         "format-muted": " Muted",
         "tooltip": false,
         "scroll-step": 2, 
-        "on-click": "pavucontrol", 
+       
+ "on-click": "pavucontrol", 
         "format-icons": {
             "default": ["", "", ""]
         }
@@ -39,7 +41,8 @@
         "interval": 1800, 
         "tooltip": true,
         "on-click": "kitty -e curl wttr.in/64085" 
-    },
+  
+  },
 
     "clock#time": { 
         "format": " {:%I:%M %p}",
@@ -51,13 +54,16 @@
         "format": " {:%a %b %d}", 
         "tooltip-format": "{:%Y-%m-%d %A}", 
         "interval": 60,
-        "on-click": "env GDK_DPI_SCALE=1.5 yad --calendar --undecorated --fixed --no-buttons --always-on-top &"
+        // FIX: Removed --no-buttons and added --button="Close:0"
+        "on-click": "env GDK_DPI_SCALE=1.5 yad --calendar --undecorated --fixed --always-on-top --button=\"Close:0\" &"
     },
 
     "custom/power": {
         "format": "", 
         "tooltip": "Power Menu",
         // CRITICAL CHANGE: Using /usr/bin/systemctl instead of /usr/bin/loginctl
-        "on-click": "sh -c 'yad --center --width=300 --height=150 --title=\"Power Options\" --text=\"Choose an action:\" --button=\"Shutdown\":0 --button=\"Reboot\":1 --button=\"Sleep\":2 --button=\"Cancel\":3; EXIT_CODE=$?; if [ $EXIT_CODE -eq 0 ]; then /usr/bin/systemctl poweroff; elif [ $EXIT_CODE -eq 1 ]; then /usr/bin/systemctl reboot; elif [ $EXIT_CODE -eq 2 ]; then /usr/bin/systemctl suspend; fi'"
+        "on-click": "sh -c 'yad --center --width=300 --height=150 --title=\"Power Options\" --text=\"Choose an action:\" --button=\"Shutdown\":0 --button=\"Reboot\":1 --button=\"Sleep\":2 --button=\"Cancel\":3;
+EXIT_CODE=$?; if [ $EXIT_CODE -eq 0 ]; then /usr/bin/systemctl poweroff; elif [ $EXIT_CODE -eq 1 ]; then /usr/bin/systemctl reboot;
+elif [ $EXIT_CODE -eq 2 ]; then /usr/bin/systemctl suspend; fi'"
     }
 }
