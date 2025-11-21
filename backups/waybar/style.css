@@ -1,0 +1,100 @@
+/* Styling for the main Waybar container */
+#waybar {
+    background-color: rgba(255, 0, 0, 0.15); /* 15% Translucent Red */
+    font-size: 14pt; /* Fixed font size */
+    font-family: "MesloLGM Nerd Font", "Hack Nerd Font", sans-serif; 
+}
+
+/* Styling for the main workspaces module container */
+#workspaces {
+    background: transparent;
+}
+
+/* Base styling for all workspace buttons (the 'circles' around the numbers) */
+#workspaces button {
+    /* These properties create the circle shape around the number */
+    padding: 6px 10px; 
+    margin: 0 4px; /* Space between buttons */
+    min-width: 32px; 
+    border-radius: 16px; 
+    
+    background-color: #383c4a; 
+    color: #ffffff; 
+    box-shadow: none;
+    border: none;
+    transition: all 0.2s ease-in-out;
+}
+
+/* Styling for buttons containing open windows (occupied) */
+#workspaces button.occupied {
+    background-color: #4b5263; 
+}
+
+/* Styling for the currently active workspace button (the highlight) */
+#workspaces button.active {
+    background-color: #ff0000; /* Highlight color (Red) */
+    color: #ffffff; 
+}
+
+/* Optional: Styling for buttons that are hovered over */
+#workspaces button:hover {
+    background-color: #8c0000; 
+}
+
+/* DEDICATED STYLING FOR POWER BUTTON */
+#custom-power {
+    background-color: transparent; 
+    color: #ffffff; 
+    padding: 6px 16px 6px 10px; 
+    margin: 0; 
+}
+
+#custom-power:hover {
+    /* Subtle change in icon color on hover */
+    color: #aaaaaa; 
+    background-color: transparent;
+}
+
+
+/* --- Modules in the CENTER: Time, Weather --- */
+
+#clock#time {
+    background-color: transparent;
+    padding: 0;
+    margin: 0;
+    /* Margin removed here, space moved to custom/weather */
+}
+
+#custom-weather {
+    background-color: transparent;
+    margin: 0;
+    /* PADDING-LEFT is used to force separation from the clock */
+    padding: 0 0 0 40px; /* Top, Right, Bottom, Left (40px) */
+}
+
+
+/* --- Modules on the RIGHT side: Temperature, Volume, Date, Power --- */
+
+/* Spacing for Temperature */
+#temperature {
+    background-color: transparent;
+    padding: 0;
+    margin: 0;
+    margin-right: 16px; /* Space between temperature and volume */
+}
+
+/* Styling for Volume/Pulseaudio module */
+#pulseaudio {
+    background-color: transparent;
+    padding: 0;
+    margin: 0;
+    margin-right: 16px; /* Space between volume and date/calendar */
+}
+
+/* Styling for the Date/Calendar module (clock#date) */
+#clock#date {
+    background-color: transparent;
+    padding: 0;
+    margin: 0;
+    margin-right: 16px; /* Space between date and power button */
+}

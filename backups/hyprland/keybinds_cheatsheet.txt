@@ -1,0 +1,44 @@
+# HYPRLAND KEYBINDS CHEATSHEET
+# -------------------------------------------------------------
+# Modifier: SUPER (Windows Key)
+# -------------------------------------------------------------
+
+# LAUNCHERS & APPLICATIONS
+SUPER + A   -> Application Launcher (Rofi)
+SUPER + Q   -> Launch Terminal (Kitty)
+SUPER + E   -> Launch File Manager (Nautilus)
+SUPER + B   -> Launch Chrome
+SUPER + W   -> Launch Work Folder (nautilus ~/Documents/work)
+SUPER + C   -> Launch Gnome Calculator
+
+# WINDOW MANAGEMENT
+SUPER + K   -> Kill Active Window
+SUPER + V   -> Toggle Floating Mode (for active window)
+SUPER + P   -> Toggle Pseudotiling (Dwindle Layout)
+SUPER + J   -> Toggle Split (Dwindle Layout)
+
+# WORKSPACE MANAGEMENT
+SUPER + [1-0]       -> Switch to Workspace 1-10
+SUPER + SHIFT + [1-0] -> Move Active Window to Workspace 1-10
+SUPER + Scroll Up   -> Next Workspace
+SUPER + Scroll Down -> Previous Workspace
+SUPER + S           -> Toggle Special Workspace (Scratchpad: magic)
+SUPER + SHIFT + S   -> Move Active Window to Special Workspace
+
+# FOCUS & MOVEMENT
+SUPER + Arrow Keys -> Move Focus (L/R/U/D)
+SUPER + LMB Drag   -> Move Window
+SUPER + RMB Drag   -> Resize Window
+
+# SYSTEM & SCREENSHOTS
+SUPER + SHIFT + R -> Reload Hyprland Configuration
+Print Screen      -> Screenshot Area (Save & Copy)
+SUPER + Print Screen -> Screenshot Fullscreen (Save & Copy)
+SUPER + SHIFT + Print Screen -> Screenshot Area to Annotate (Swappy)
+
+# MULTIMEDIA KEYS
+XF86AudioRaiseVolume -> Volume Up
+XF86AudioLowerVolume -> Volume Down
+XF86AudioMute      -> Mute/Unmute Volume
+XF86MonBrightnessUp -> Brightness Up
+XF86MonBrightnessDown -> Brightness Down
